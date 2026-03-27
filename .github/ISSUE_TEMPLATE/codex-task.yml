@@ -1,0 +1,74 @@
+name: Codex Task
+description: Codex가 바로 작업 가능한 구현 이슈
+title: "[codex] "
+labels:
+  - codex:ready
+body:
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal
+      description: 무엇을 바꾸는지 1~3문장
+      placeholder: |
+        예) 온보딩 상태 조회 API를 추가한다.
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: 이번 이슈에서 할 일
+      placeholder: |
+        - endpoint 추가
+        - facade/service 연결
+        - 테스트 추가
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: 참고 파일, 문서, 에러 로그, 관련 이슈
+      placeholder: |
+        - src/main/java/...
+        - src/test/java/...
+        - 관련 이슈/PR: #123
+        - 에러: ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: done_when
+    attributes:
+      label: Acceptance Criteria
+      description: 완료 조건
+      placeholder: |
+        - [ ] API가 200 응답을 반환한다
+        - [ ] 필요한 필드가 응답에 포함된다
+        - [ ] 관련 테스트가 추가/수정된다
+    validations:
+      required: true
+
+  - type: textarea
+    id: verification
+    attributes:
+      label: Verification
+      description: 검증 방법
+      placeholder: |
+        - ./gradlew test
+        - 수동 검증:
+          1. ...
+          2. ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: constraints
+    attributes:
+      label: Constraints
+      description: 이번 작업 제약사항
+      placeholder: |
+        - DB 스키마 변경 금지
+        - API 스펙 호환성 유지
