@@ -19,7 +19,14 @@ class CodexTutorialApplicationTests {
     void readmeContainsOnlyExpectedText() throws IOException {
         String readme = Files.readString(Path.of("README.md"));
 
-        assertEquals("Codex-Tutorial", readme.trim());
+        assertEquals("""
+                - Java 21
+                - Gradle
+                - Spring Boot 4.0.4
+                - Spring Web MVC
+                - Lombok
+                - JUnit 5
+                """.trim(), readme.trim());
     }
 
 }
