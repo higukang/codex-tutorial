@@ -39,4 +39,17 @@ class CodexTutorialApplicationTests {
                 .andExpect(status().isOk())
                 .andExpect(content().string("hi " + age));
     }
+
+    @Test
+    void displayAge_negativeAge_returnsBadRequest() throws Exception {
+        //given
+        int age = -1;
+
+        //when
+        var resultActions = mockMvc.perform(get("/simple/age/{age}", age));
+
+        //then
+        resultActions
+                .andExpect(status().isBadRequest());
+    }
 }
