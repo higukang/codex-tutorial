@@ -13,4 +13,9 @@ public class SimpleController {
     public String displayName(@PathVariable String name) {
         return "hi " + name;
     }
+
+    @GetMapping("/age/{age}")
+    public String displayAge(@PathVariable int age) {
+        return "hi " + age;
+    }
 }
