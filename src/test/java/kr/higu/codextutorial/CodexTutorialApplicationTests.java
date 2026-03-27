@@ -16,10 +16,10 @@ class CodexTutorialApplicationTests {
     }
 
     @Test
-    void readmeContainsOnlyExpectedText() throws IOException {
+    void readmeContainsExpectedHeader() throws IOException {
         String readme = Files.readString(Path.of("README.md"));
 
-        assertEquals("Codex-Tutorial", readme.trim());
+        assertEquals("# Codex-Tutorial", readme.trim());
     }
 
 }
