@@ -20,6 +20,8 @@ class CodexTutorialApplicationTests {
         String readme = Files.readString(Path.of("README.md"));
 
         assertEquals("""
+                # Codex-Tutorial
+
                 - Java 21
                 - Gradle
                 - Spring Boot 4.0.4
